@@ -1,0 +1,30 @@
+import math
+import os
+import random
+import re
+import sys
+
+
+def plusMinus(arr):
+    # Write your code here
+    neg = f"{(len([num for num in arr if num < 0])/n):.6f}"
+    
+    positive_num = [num for num in arr if num > 0]
+    positive = len(positive_num)
+    pos = f"{positive/n:.6f}"
+    
+    zero = [num for num in arr if num == 0]
+    zero1 = len(zero)
+    zero2 = f"{zero1/n:.6f}"
+    
+    print(pos)
+    print(neg)
+    print(zero2)
+    
+    
+if __name__ == '__main__':
+    n = int(input().strip())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    plusMinus(arr)
