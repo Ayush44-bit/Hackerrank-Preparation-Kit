@@ -1,0 +1,28 @@
+Question:
+Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
+
+
+import math
+import os
+import random
+import re
+import sys
+
+def miniMaxSum(arr):
+    lar = sorted(arr)[-4:]  #Note this
+    small = sorted(arr)    #Note this
+    sums = 0
+    sums1 = 0
+    for i in range(4):
+        sums = sums + small[i]
+    
+    for i in range(4):
+        sums1 = sums1 + lar[i]
+    print(sums, sums1)
+    
+
+if __name__ == '__main__':
+
+    arr = list(map(int, input().rstrip().split()))
+
+    miniMaxSum(arr)
