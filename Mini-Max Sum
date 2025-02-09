@@ -9,8 +9,8 @@ import re
 import sys
 
 def miniMaxSum(arr):
-    lar = sorted(arr)[-4:]  #Note this
-    small = sorted(arr)    #Note this
+    lar = sorted(arr)[-4:]  
+    small = sorted(arr)    
     sums = 0
     sums1 = 0
     for i in range(4):
