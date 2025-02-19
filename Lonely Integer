@@ -1,0 +1,33 @@
+Question
+Given an array of integers, where all elements but one occur twice, find the unique element.
+
+Example:
+a = [1, 2, 3, 4, 3, 2, 1]
+The unique element is 4.
+
+Code:
+
+import math
+import os
+import random
+import re
+import sys
+from collections import Counter
+
+def lonelyinteger(a):
+    count = Counter(a)
+    uni = [num for num, freq in count.items() if freq == 1]
+    return uni[0]        
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input().strip())
+
+    a = list(map(int, input().rstrip().split()))
+
+    result = lonelyinteger(a)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
